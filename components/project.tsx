@@ -28,7 +28,7 @@ export function Project({
             Go to {repoUrl} →
           </a>
         ) : (
-          <div className="absolute inset-0 z-10 flex items-center justify-center text-white underline opacity-0 transition duration-100 group-hover:bg-stone-950/50 group-hover:opacity-100">
+          <div className="absolute inset-0 z-10 flex items-center justify-center text-white underline opacity-0 transition-all duration-100 group-hover:bg-stone-950/50 group-hover:opacity-100">
             <p>Repo not available.</p>
           </div>
         )}

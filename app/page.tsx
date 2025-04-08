@@ -20,7 +20,7 @@ export default function Home() {
             <h2 className="text-2xl font-medium">Projects</h2>
             <p>I have worked on a range of projects from finance to games.</p>
           </div>
-          <div className="grid grid-cols-1 grid-rows-3 gap-x-6 lg:grid-cols-3 lg:grid-rows-1">
+          <div className="grid grid-cols-1 grid-rows-3 gap-x-6 gap-y-10 lg:grid-cols-3 lg:grid-rows-1">
             <Project
               title="MoneyHive"
               desc="An aggregate banking application to help you manage your money and find the best deals on financial products."
