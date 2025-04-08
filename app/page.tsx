@@ -1,102 +1,98 @@
-import Image from "next/image";
+import { Project } from "@/components/project";
+import { ThemeSwitcher } from "@/components/theme-switcher";
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex min-h-screen w-screen flex-col justify-between gap-16 p-8 pb-20 font-mono selection:bg-[#728071] sm:p-20">
+      <main className="flex flex-col gap-20">
+        <div className="flex flex-col gap-8">
+          <h1 className="text-4xl font-semibold">Hi, I&apos;m Jack.</h1>
+          <p className="max-w-[600px]">
+            I am a programmer and software developer, specialising in full-stack
+            development. I strive to create excellent experiences through
+            software and digital tools.
+          </p>
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+        <div className="space-y-8">
+          <div className="space-y-2">
+            <h2 className="text-2xl font-medium">Projects</h2>
+            <p>I have worked on a range of projects from finance to games.</p>
+          </div>
+          <div className="grid grid-cols-1 grid-rows-3 gap-x-6 lg:grid-cols-3 lg:grid-rows-1">
+            <Project
+              title="MoneyHive"
+              desc="An aggregate banking application to help you manage your money and find the best deals on financial products."
+              imageUrl="/assets/img/moneyhive-home.webp"
+              imageAlt="The MoneyHive banking application user interface"
+              tags={["React", "TypeScript", "ElasticSearch", "CloudFlare"]}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Project
+              title="Auto Hub"
+              desc="An Auto Trader and TradeMe cars competitor for listing automobiles for sale."
+              imageUrl="/assets/img/auto-hub.webp"
+              imageAlt="The Auto Hub application user interface"
+              tags={["Laravel", "PHP", "React", "PostgreSQL"]}
+              repoUrl="github.com/jackdar/auto-hub"
+            />
+            <Project
+              title="PigTopia"
+              desc="A truly evolutionary pig simulator. A game where you grow and evolve your trusty pig."
+              imageUrl="/assets/img/pigtopia.webp"
+              imageAlt="The PigTopia GitHub repository banner image."
+              tags={["Unity", "C#", "OOP", "Game Engines"]}
+              repoUrl="github.com/jackdar/PigTopia"
+            />
+          </div>
+        </div>
+
+        <div className="space-y-8">
+          <div className="space-y-2">
+            <h2 className="text-2xl font-medium">Get in touch</h2>
+            <p>
+              Pop me your email address and I will get back to you as soon as
+              possible.
+            </p>
+          </div>
+          <form className="group flex w-fit min-w-full flex-row items-center justify-between gap-4 rounded-full bg-stone-200 p-2 pl-8 md:min-w-[350px] dark:bg-stone-800">
+            <label htmlFor="email" hidden>
+              Email address
+            </label>
+            <input
+              id="email-field"
+              name="email"
+              type="email"
+              placeholder="john@example.com"
+              className="field-sizing-content w-full outline-none"
+            />
+
+            <button className="bg-foreground text-background flex h-12 w-12 flex-none cursor-pointer items-center justify-center rounded-full border border-solid border-transparent text-sm font-medium transition-colors hover:bg-[#383838] sm:text-base dark:hover:bg-[#ccc]">
+              <ArrowUpRight size={24} />
+            </button>
+          </form>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="flex flex-wrap gap-[24px]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://linkedin.com/in/jackdar"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <Linkedin size={20} color="#666" aria-hidden />
+          LinkedIn
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/jackdar"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener norefferer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <Github size={20} color="#666" aria-hidden />
+          GitHub
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <ThemeSwitcher className="ml-auto" />
       </footer>
     </div>
   );
