@@ -3,10 +3,10 @@
 Created with Next.js and TailwindCSS v4. Simple as.
 
 ## TODO:
-- [] Create main landing page
-- [] Setup email form
+- [x] Create main landing page
+- [ ] Setup email form
 
-** Extras **
+**Extras**
 - Projects page...
 - Terminal style interactive element...
 
