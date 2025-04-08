@@ -24,7 +24,7 @@ export default function Home() {
             <Project
               title="MoneyHive"
               desc="An aggregate banking application to help you manage your money and find the best deals on financial products."
-              imageUrl="/assets/img/moneyhive-home.webp"
+              imageUrl="/assets/img/moneyhive.webp"
               imageAlt="The MoneyHive banking application user interface"
               tags={["React", "TypeScript", "ElasticSearch", "CloudFlare"]}
             />
