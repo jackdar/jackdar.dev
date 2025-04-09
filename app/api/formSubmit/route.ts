@@ -1,19 +1,15 @@
 export async function POST(request: Request) {
   try {
     const formData = await request.json();
-    console.log(formData);
 
     // Send the message to Slack
-    const res = await fetch(
-      "https://hooks.slack.com/triggers/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",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    const res = await fetch(process.env.SLACK_HOOK_URL || "", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify(formData),
+    });
 
     const data = await res.json();
 
