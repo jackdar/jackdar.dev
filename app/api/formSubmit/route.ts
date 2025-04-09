@@ -2,6 +2,15 @@ export async function POST(request: Request) {
   try {
     const formData = await request.json();
 
+    if (!formData.email) {
+      return new Response('{ "error": "No email provided!" }', {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+
     // Send the message to Slack
     const res = await fetch(process.env.SLACK_HOOK_URL || "", {
       method: "POST",
