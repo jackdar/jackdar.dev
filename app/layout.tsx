@@ -17,6 +17,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jack Darlington - Software Developer",
   description: "Hi, I'm a Full-Stack Developer based in Auckland, New Zealand.",
+  keywords: "software developer, full-stack developer, jack darlington, jackdar.dev",
+  robots: "index, follow"
 };
 
 export default function RootLayout({
