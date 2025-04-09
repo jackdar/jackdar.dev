@@ -1,0 +1,27 @@
+{
+  "projects": [
+    {
+      "title": "MoneyHive",
+      "description": "An aggregate banking application to help you manage your money and find the best deals on financial products.",
+      "imageUrl": "/assets/img/moneyhive.webp",
+      "imageAlt": "The MoneyHive banking application user interface",
+      "tags": ["React", "TypeScript", "ElasticSearch", "CloudFlare"]
+    },
+    {
+      "title": "Auto Hub",
+      "description": "An Auto Trader and TradeMe cars competitor for listing automobiles for sale.",
+      "imageUrl": "/assets/img/auto-hub.webp",
+      "imageAlt": "The Auto Hub application user interface",
+      "tags": ["Laravel", "PHP", "React", "PostgreSQL"],
+      "repoUrl": "github.com/jackdar/auto-hub"
+    },
+    {
+      "title": "PigTopia",
+      "description": "A truly evolutionary pig simulator. A game where you grow and evolve your trusty piggy.",
+      "imageUrl": "/assets/img/pigtopia.webp",
+      "imageAlt": "The PigTopia GitHub repository banner image.",
+      "tags": ["Unity", "C#", "OOP", "Game Engines"],
+      "repoUrl": "github.com/jackdar/PigTopia"
+    }
+  ]
+}

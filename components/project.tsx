@@ -1,20 +1,22 @@
 import Image from "next/image";
 
-export function Project({
-  title,
-  desc,
-  imageUrl,
-  imageAlt,
-  tags,
-  repoUrl,
-}: {
+export interface ProjectConfig {
   title: string;
-  desc: string;
+  description: string;
   imageUrl: string;
   imageAlt: string;
   tags: string[];
   repoUrl?: string;
-}) {
+}
+
+export function Project({
+  title,
+  description,
+  imageUrl,
+  imageAlt,
+  tags,
+  repoUrl,
+}: ProjectConfig) {
   return (
     <div className="flex flex-col gap-4">
       <div className="group relative z-10 cursor-pointer overflow-hidden rounded-lg transition-all duration-100 ease-in-out hover:scale-[102%]">
@@ -32,11 +34,18 @@ export function Project({
             <p>Repo not available.</p>
           </div>
         )}
-        <Image src={imageUrl} alt={imageAlt} width={1440} height={1024} />
+        <Image
+          src={imageUrl}
+          alt={imageAlt}
+          width={1440}
+          height={1024}
+          loading="eager"
+          priority
+        />
       </div>
       <div>
         <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm">{desc}</p>
+        <p className="text-sm">{description}</p>
       </div>
       <div className="flex flex-wrap gap-2 text-xs">
         {tags.map((tag, index) => (

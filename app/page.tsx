@@ -1,7 +1,9 @@
 import Form from "@/components/form";
-import { Project } from "@/components/project";
+import { Project, ProjectConfig } from "@/components/project";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Github, Linkedin } from "lucide-react";
+
+import { siteData } from "@/next.json.mjs";
 
 export default function Home() {
   return (
@@ -22,29 +24,9 @@ export default function Home() {
             <p>I have worked on a range of projects from finance to games.</p>
           </div>
           <div className="grid grid-cols-1 grid-rows-3 gap-x-6 gap-y-10 lg:grid-cols-3 lg:grid-rows-1">
-            <Project
-              title="MoneyHive"
-              desc="An aggregate banking application to help you manage your money and find the best deals on financial products."
-              imageUrl="/assets/img/moneyhive.webp"
-              imageAlt="The MoneyHive banking application user interface"
-              tags={["React", "TypeScript", "ElasticSearch", "CloudFlare"]}
-            />
-            <Project
-              title="Auto Hub"
-              desc="An Auto Trader and TradeMe cars competitor for listing automobiles for sale."
-              imageUrl="/assets/img/auto-hub.webp"
-              imageAlt="The Auto Hub application user interface"
-              tags={["Laravel", "PHP", "React", "PostgreSQL"]}
-              repoUrl="github.com/jackdar/auto-hub"
-            />
-            <Project
-              title="PigTopia"
-              desc="A truly evolutionary pig simulator. A game where you grow and evolve your trusty pig."
-              imageUrl="/assets/img/pigtopia.webp"
-              imageAlt="The PigTopia GitHub repository banner image."
-              tags={["Unity", "C#", "OOP", "Game Engines"]}
-              repoUrl="github.com/jackdar/PigTopia"
-            />
+            {siteData.projects.map((project: ProjectConfig) => (
+              <Project key={project.title} {...project} />
+            ))}
           </div>
         </div>
 

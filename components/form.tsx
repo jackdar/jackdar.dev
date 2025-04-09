@@ -7,12 +7,12 @@ import { toast } from "sonner";
 export default function Form() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    event.currentTarget.reset();
 
     const formData = new FormData(event.currentTarget);
     const data = {
       email: formData.get("email"),
     };
-    console.log(data);
 
     const res = await fetch("/api/formSubmit", {
       method: "POST",
