@@ -20,7 +20,7 @@ export function Project({
       <div className="group relative z-10 cursor-pointer overflow-hidden rounded-lg transition-all duration-100 ease-in-out hover:scale-[102%]">
         {repoUrl ? (
           <a
-            className="absolute inset-0 z-10 flex items-center justify-center text-white underline opacity-0 transition-all duration-100 group-hover:bg-stone-950/50 group-hover:opacity-100"
+            className="absolute inset-0 z-10 flex items-center justify-center p-4 text-center text-white underline opacity-0 transition-all duration-100 group-hover:bg-stone-950/50 group-hover:opacity-100"
             href={`https://www.${repoUrl}`}
             target="_blank"
             rel="noopener norefferer"

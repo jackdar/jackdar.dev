@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jack Darlington - Software Developer",
   description: "Hi, I'm a Full-Stack Developer based in Auckland, New Zealand.",
-  keywords: "software developer, full-stack developer, jack darlington, jackdar.dev",
-  robots: "index, follow"
+  keywords:
+    "software developer, full-stack developer, jack darlington, jackdar.dev",
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -35,6 +37,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

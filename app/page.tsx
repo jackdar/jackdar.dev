@@ -1,6 +1,7 @@
+import Form from "@/components/form";
 import { Project } from "@/components/project";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   return (
@@ -55,22 +56,7 @@ export default function Home() {
               possible.
             </p>
           </div>
-          <form className="group flex w-fit min-w-full flex-row items-center justify-between gap-4 rounded-full bg-stone-200 p-2 pl-8 md:min-w-[350px] dark:bg-stone-800">
-            <label htmlFor="email" hidden>
-              Email address
-            </label>
-            <input
-              id="email-field"
-              name="email"
-              type="email"
-              placeholder="john@example.com"
-              className="field-sizing-content w-full outline-none"
-            />
-
-            <button className="bg-foreground text-background flex h-12 w-12 flex-none cursor-pointer items-center justify-center rounded-full border border-solid border-transparent text-sm font-medium transition-colors hover:bg-[#383838] sm:text-base dark:hover:bg-[#ccc]">
-              <ArrowUpRight size={24} />
-            </button>
-          </form>
+          <Form />
         </div>
       </main>
       <footer className="flex flex-wrap gap-[24px]">
